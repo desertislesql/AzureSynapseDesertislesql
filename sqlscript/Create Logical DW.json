@@ -1,0 +1,17 @@
+{
+	"name": "Create Logical DW",
+	"properties": {
+		"content": {
+			"query": "--Create Database AWDW\n\n--CREATE EXTERNAL DATA SOURCE ExternalDataSource\n--\tWITH (\n--\t\tLOCATION   = 'https://synapsedlpbi.dfs.core.windows.net/powerbi' \n--\t    );\n\n/*\nCreate View dbo.Product\nAS\nSELECT        *,\n getdate() AS LoadDate\nFROM\n    OPENROWSET(\n        BULK 'https://synapsedlcentralus.dfs.core.windows.net/powerbi/Gold/PowerBIModel/DimProduct.csv',\n        FORMAT = 'CSV',\n        PARSER_VERSION = '2.0',\n        HEADER_ROW = TRUE\n    ) AS [result]\n\n*/\nCreate View dbo.SalesTerritory\nAS\nSELECT        *,\n getdate() AS LoadDate\nFROM\n    OPENROWSET(\n        BULK 'https://synapsedlcentralus.dfs.core.windows.net/powerbi/Gold/PowerBIModel/DimSalesTerritory.csv',\n        FORMAT = 'CSV',\n        PARSER_VERSION = '2.0',\n        HEADER_ROW = TRUE\n    ) AS [result]\n\nCreate View dbo.InternetSales\nAS\nSELECT        *,\n getdate() AS LoadDate\nFROM\n    OPENROWSET(\n        BULK 'https://synapsedlcentralus.dfs.core.windows.net/powerbi/Gold/PowerBIModel/FactInternetSale.csv',\n        FORMAT = 'CSV',\n        PARSER_VERSION = '2.0',\n        HEADER_ROW = TRUE\n    ) AS [result]\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "AWDW",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

@@ -1,0 +1,149 @@
+{
+	"name": "TaxiAnalysis",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "PBISparkPool",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "56g",
+			"driverCores": 8,
+			"executorMemory": "56g",
+			"executorCores": 8,
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/533ffcb6-eec4-4d92-8188-e1debbabe47c/resourceGroups/SynapseRGPBI/providers/Microsoft.Synapse/workspaces/synapsewksppbi/bigDataPools/PBISparkPool",
+				"name": "PBISparkPool",
+				"type": "Spark",
+				"endpoint": "https://synapsewksppbi.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/PBISparkPool",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "2.4",
+				"nodeCount": 3,
+				"cores": 8,
+				"memory": 56
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "markdown",
+				"source": [
+					"## Download and Prepare data for analysis\n",
+					""
+				]
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"from azureml.opendatasets import NycTlcYellow\n",
+					"from dateutil import parser\n",
+					"from datetime import datetime\n",
+					"\n",
+					""
+				],
+				"execution_count": 8
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"start_date = parser.parse('2018-06-01')\n",
+					"end_date = parser.parse('2018-06-14')\n",
+					"nyc_tlc = NycTlcYellow(start_date=start_date, end_date=end_date)\n",
+					"filtered_df = nyc_tlc.to_spark_dataframe()"
+				],
+				"execution_count": 10
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"%%pyspark\n",
+					"spark.sql(\"CREATE DATABASE IF NOT EXISTS TaxiData\")"
+				],
+				"execution_count": 11
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"taxi_df.write.mode(\"overwrite\").saveAsTable(\"TaxiData.filtered_df\")"
+				],
+				"execution_count": 14
+			},
+			{
+				"cell_type": "markdown",
+				"source": [
+					"#### Filter and curate data\n",
+					""
+				]
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"from pyspark.sql.functions import unix_timestamp, date_format, col, when\n",
+					"\n",
+					"taxi_df = filtered_df.select('totalAmount', 'fareAmount', 'tipAmount', 'paymentType', 'rateCodeId', 'passengerCount'\\\n",
+					"                                , 'tripDistance', 'tpepPickupDateTime', 'tpepDropoffDateTime'\\\n",
+					"                                , date_format('tpepPickupDateTime', 'hh').alias('pickupHour')\\\n",
+					"                                , date_format('tpepPickupDateTime', 'EEEE').alias('weekdayString')\\\n",
+					"                                , (unix_timestamp(col('tpepDropoffDateTime')) - unix_timestamp(col('tpepPickupDateTime'))).alias('tripTimeSecs')\\\n",
+					"                                , (when(col('tipAmount') > 0, 1).otherwise(0)).alias('tipped')\n",
+					"                                )\\\n",
+					"                        .filter((filtered_df.passengerCount > 0) & (filtered_df.passengerCount < 8)\\\n",
+					"                                & (filtered_df.tipAmount >= 0) & (filtered_df.tipAmount <= 25)\\\n",
+					"                                & (filtered_df.fareAmount >= 1) & (filtered_df.fareAmount <= 250)\\\n",
+					"                                & (filtered_df.tipAmount < filtered_df.fareAmount)\\\n",
+					"                                & (filtered_df.tripDistance > 0) & (filtered_df.tripDistance <= 100)\\\n",
+					"                                & (filtered_df.rateCodeId <= 5)\n",
+					"                                & (filtered_df.paymentType.isin({\"1\", \"2\"})))"
+				],
+				"execution_count": 12
+			},
+			{
+				"cell_type": "markdown",
+				"source": [
+					"### Create a table with the curated data\n",
+					""
+				]
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"taxi_df.write.mode(\"overwrite\").saveAsTable(\"TaxiData.Junetaxi\")"
+				],
+				"execution_count": 13
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"%%spark\n",
+					"val table_df = spark.sqlContext.sql (\"select * from TaxiData.Junetaxi\")\n",
+					""
+				],
+				"execution_count": 15
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"%%spark\n",
+					"table_df.write.synapsesql(\"sqldw.dbo.TaxiJune\", Constants.INTERNAL)"
+				],
+				"execution_count": 16
+			}
+		]
+	}
+}

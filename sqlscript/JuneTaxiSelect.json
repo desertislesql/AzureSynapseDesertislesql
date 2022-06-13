@@ -1,0 +1,15 @@
+{
+	"name": "JuneTaxiSelect",
+	"properties": {
+		"content": {
+			"query": "SELECT TOP (100) [totalAmount]\n,[fareAmount]\n,[tipAmount]\n,[paymentType]\n,[rateCodeId]\n,[passengerCount]\n,[tripDistance]\n,[tpepPickupDateTime]\n,[tpepDropoffDateTime]\n,[pickupHour]\n,[weekdayString]\n,[tripTimeSecs]\n,[tipped]\n FROM [taxidata].[dbo].[junetaxi]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "taxidata",
+				"type": "SqlOnDemand"
+			}
+		}
+	}
+}

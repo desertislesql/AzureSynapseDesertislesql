@@ -1,0 +1,17 @@
+{
+	"name": "Create ExternalTable",
+	"properties": {
+		"content": {
+			"query": "IF NOT EXISTS (SELECT * FROM sys.external_file_formats WHERE name = 'SynapseDelimitedTextFormat') \n\tCREATE EXTERNAL FILE FORMAT [SynapseDelimitedTextFormat] \n\tWITH ( FORMAT_TYPE = DELIMITEDTEXT ,\n\t       FORMAT_OPTIONS (\n\t\t\t FIELD_TERMINATOR = ',',\n\t\t\t USE_TYPE_DEFAULT = FALSE\n\t\t\t))\nGO\n\nIF NOT EXISTS (SELECT * FROM sys.external_data_sources WHERE name = 'powerbi_synapsedlcentralus_dfs_core_windows_net') \n\tCREATE EXTERNAL DATA SOURCE [powerbi_synapsedlcentralus_dfs_core_windows_net] \n\tWITH (\n\t\tLOCATION = 'abfss://powerbi@synapsedlcentralus.dfs.core.windows.net' \n\t\t \n\t)\nGO\n\nCREATE EXTERNAL TABLE SFFood (\n\t[Inspection ID] bigint,\n\t[DBA Name] nvarchar(200),\n\t[AKA Name] nvarchar(200),\n\t[License #] bigint,\n\t[Facility Type] nvarchar(200),\n\t[Risk] nvarchar(200),\n\t[Address] nvarchar(200),\n\t[City] nvarchar(200),\n\t[State] nvarchar(200),\n\t[Zip] bigint,\n\t[Inspection Date] nvarchar(200),\n\t[Inspection Type] nvarchar(200),\n\t[Results] nvarchar(200),\n\t[Violations] nvarchar(200),\n\t[Latitude] float,\n\t[Longitude] float,\n\t[Location] nvarchar(200)\n\t)\n\tWITH (\n\tLOCATION = 'Bronze/sfdata/Food_Inspections.csv',\n\tDATA_SOURCE = [powerbi_synapsedlcentralus_dfs_core_windows_net],\n\tFILE_FORMAT = [SynapseDelimitedTextFormat]\n\t)\nGO\n\n\nSELECT TOP 100 * FROM dbo.SFFood\nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "USEmp",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
