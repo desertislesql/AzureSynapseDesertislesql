@@ -17,317 +17,11 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "afd553e7-3855-4aa4-8e21-84705417ae80"
+				"spark.autotune.trackingId": "0926d89b-c345-400b-8c07-c84e59d44326"
 			}
 		},
 		"metadata": {
 			"saveOutput": true,
-			"synapse_widget": {
-				"version": "0.1",
-				"state": {
-					"01eb7c49-7df2-4b80-8b64-5d50eeac247b": {
-						"type": "Synapse.DataFrame",
-						"sync_state": {
-							"table": {
-								"rows": [
-									{
-										"0": "2355745",
-										"1": "HOPE COFFEEHOUSE",
-										"2": "HOPE CAFE",
-										"3": "2363747",
-										"4": "Restaurant",
-										"5": "Risk 2 (Medium)",
-										"6": "2431 W ROOSEVELT RD ",
-										"7": "CHICAGO",
-										"8": "IL",
-										"9": "60608",
-										"10": "12/20/2019",
-										"11": "Canvass",
-										"12": "Pass w/ Conditions",
-										"13": "3. MANAGEMENT, FOOD EMPLOYEE AND CONDITIONAL EMPLOYEE; KNOWLEDGE, RESPONSIBILITIES AND REPORTING - Comments: OBSERVED NO EMPLOYEE HEALTH POLICY ON PREMISES AT THIS TIME, INSTRUCTED TO PROVIDE. PRIORITY FOUNDATION 7-38-010, NO CITATION ISSUED. | 5. PROCEDURES FOR RESPONDING TO VOMITING AND DIARRHEAL EVENTS - Comments: OBSERVED NO PROCEDURES FOR CLEANING UP VOMIT AND DIARRHEA, INSTRUCTED TO PROVIDE THE NECESSARY ITEMS AND A DISINFECTANT RATED FOR NOROVIRUS. PRIORITY FOUNDATION 7-38-005, NO CITATION ISSUCED. | 53. TOILET FACILITIES: PROPERLY CONSTRUCTED, SUPPLIED, & CLEANED - Comments: OBSERVED THE WOMENS TOILET ROOM TRASH RECPTACLE WITHOUT A COVER, INSTRUCTED TO PROVIDE. | 57. ALL FOOD EMPLOYEES HAVE FOOD HANDLER TRAINING - Comments: OBSERVED NO FOOD HANDLER TRAINING ON PREMISES AT THIS TIME, INSTRUCTED TO PROVIDE.",
-										"14": "41.86649382",
-										"15": "-87.68682968",
-										"16": "(-87.68682968304535, 41.866493816906065)"
-									},
-									{
-										"0": "2321194",
-										"1": "AUTHENTIC JERK FOODS, INC.",
-										"2": "AUTHENTIC JERK FOODS, INC.",
-										"3": "2583376",
-										"4": "Restaurant",
-										"5": "Risk 1 (High)",
-										"6": "6129 S Ashland AVE ",
-										"7": "CHICAGO",
-										"8": "IL",
-										"9": "60636",
-										"10": "11/6/2019",
-										"11": "Canvass",
-										"12": "Out of Business",
-										"14": "41.78223236",
-										"15": "-87.66413998",
-										"16": "(-87.66413997857381, 41.78223235902597)"
-									},
-									{
-										"0": "2320894",
-										"1": "DOLLAR TREE #08063",
-										"2": "DOLLAR TREE #08063",
-										"3": "2683545",
-										"4": "Grocery Store",
-										"5": "Risk 3 (Low)",
-										"6": "7000 S PULASKI RD ",
-										"7": "CHICAGO",
-										"8": "IL",
-										"9": "60629",
-										"10": "10/31/2019",
-										"11": "License",
-										"12": "Pass w/ Conditions",
-										"13": "5. PROCEDURES FOR RESPONDING TO VOMITING AND DIARRHEAL EVENTS - Comments: FOUND NO PROCEDURE OR CLEAN UP KIT FOR RESPONDING TO VOMITING AND DIARRHEAL EVENTS. INSTRUCTED TO PROVIDE A PROCEDURE AND CLEAN UP KIT FOR HANDLING THESE EVENTS. PRIORITY FOUNDATION VIOLATION 7-38-005 NO CITATION ISSUED. | 53. TOILET FACILITIES: PROPERLY CONSTRUCTED, SUPPLIED, & CLEANED - Comments: THE RECEPTACLE IN THE WOMEN'S TOILET ROOM DOES NOT HAVE A LID/COVER. INSTRUCTED TO PROVIDE A RECEPTACLE WITH A LID/COVER. MAINTAIN SAME. | 55. PHYSICAL FACILITIES INSTALLED, MAINTAINED & CLEAN - Comments: MISSING/DAMAGED CEILING TILES IN THE REAR MUST BE REPLACED. INSTRUCTED TO REPLACE. MAINTAIN SAME. | 55. PHYSICAL FACILITIES INSTALLED, MAINTAINED & CLEAN - Comments: FLOORS THROUGH OUT NEEDS TO BE DETAILED CLEANED. INSTRUCTED TO CLEAN AND MAINTAIN.",
-										"14": "41.76588129",
-										"15": "-87.72258716",
-										"16": "(-87.72258715772858, 41.76588128581981)"
-									},
-									{
-										"0": "2320910",
-										"1": "J.T.'S GENUINE SANDWICH",
-										"2": "J.T.'S GENUINE SANDWICH",
-										"3": "2689893",
-										"4": "Restaurant",
-										"5": "Risk 1 (High)",
-										"6": "3970 N ELSTON AVE ",
-										"7": "CHICAGO",
-										"8": "IL",
-										"9": "60618",
-										"10": "11/1/2019",
-										"11": "License",
-										"12": "Pass",
-										"13": "51. PLUMBING INSTALLED; PROPER BACKFLOW DEVICES - Comments: BACKFLOW PREVENTION DEVICE NOT LOCATED AT MOP SINK. INSTRUCTED MANAGER MUST PROVIDE AND MAKE VISIBLE A BACKFLOW PREVENTION DEVICE FOR MOP SINK. | 53. TOILET FACILITIES: PROPERLY CONSTRUCTED, SUPPLIED, & CLEANED - Comments: NO RECEPTACLE WITH LID/COVER INSIDE WASHROOMS. MUST PROVIDE A COVERED TRASH RECEPTACLE IN WASHROOMS. | 58. ALLERGEN TRAINING AS REQUIRED - Comments: NO FOOD ALLERGEN TRAINING CERTIFICATES ON PREMISES. INSTRUCTED ALL CITY OF CHICAGO CERTIFIED FOOD MANAGERS MUST HAVE FOOD ALLERGEN TRAINING CERTIFICATES ON PREMISES. ",
-										"14": "41.95337788",
-										"15": "-87.71884823",
-										"16": "(-87.71884823371836, 41.95337788158545)"
-									},
-									{
-										"0": "2355894",
-										"1": "CHICAGO'S PIZZA",
-										"2": "CHICAGO'S PIZZA",
-										"3": "1696176",
-										"4": "Restaurant",
-										"5": "Risk 1 (High)",
-										"6": "4520 W IRVING PARK RD ",
-										"7": "CHICAGO",
-										"8": "IL",
-										"9": "60641",
-										"10": "12/24/2019",
-										"11": "Canvass",
-										"12": "Fail",
-										"13": "3. MANAGEMENT, FOOD EMPLOYEE AND CONDITIONAL EMPLOYEE; KNOWLEDGE, RESPONSIBILITIES AND REPORTING - Comments: OBSERVED NO WRITTEN EMPLOYEE HEALTH POLICY ON THE PREMISES.  MANAGEMENT INSTRUCTED TO HAVE A SIGNED EMPLOYEE HEALTH POLICY FOR EACH EMPLOYEE.  PRIORITY FOUNDATION 7-38-010.  NO CITATION ISSUED. | 5. PROCEDURES FOR RESPONDING TO VOMITING AND DIARRHEAL EVENTS - Comments: OBSERVED NO CLEAN UP SUPPLIES ON THE PREMISES TO RESPOND TO VOMIT AND DIARRHEAL EVENTS.  MANAGEMENT INSTRUCTED TO PROVIDE ALL SUPPLIES LISTED ON THE CLEAN UP PROCEDURE.  PRIORITY FOUNDATION 7-38-005.  NO CITATION ISSUED. | 23. PROPER DATE MARKING AND DISPOSITION - Comments: OBSERVED READY-TO-EAT, TCS FOODS REFRIGERATED OVER 24 HOURS NOT DATE MARKED TO INDICATE THE DATE IN WHICH THE FOOD MUST BE CONSUMED OR DISCARDED.  MANAGEMENT INSTRUCTED TO DATE MARK ALL APPLICABLE FOODS.  PRIORITY FOUNDATION 7-38-005.  NO CITATION ISSUED. | 38. INSECTS, RODENTS, & ANIMALS NOT PRESENT - Comments: OBSERVED APPROXIMATELY 50 LIVE SMALL FLIES ON THE WALLS AND CEILING IN THE BASEMENT DISH WASHING AREA AND DRY STORAGE AREA.  ADDITIONAL PEST CONTROL SERVICE IS NEEDED TO MINIMIZE OR ELIMINATE THE PEST ACTIVITY.  PRIORITY FOUNDATION 7-38-020(A).  CITATION ISSUED. | 49. NON-FOOD/FOOD CONTACT SURFACES CLEAN - Comments: CLEAN THE WIRE STORAGE RACKS IN THE WALK-IN COOLER AND GREASE TRAP IN THE BASEMENT DISH WASHING AREA. | 58. ALLERGEN TRAINING AS REQUIRED - Comments: OBSERVED THE CERTIFIED FOOD MANAGER WITHOUT AN ALLERGEN TRAINING CERTIFICATE.  MANAGEMENT INSTRUCTED THAT ALL CERTIFIED FOOD MANAGERS MUST SHOW PROOF OF TRAINING.",
-										"14": "41.95359543",
-										"15": "-87.74147723",
-										"16": "(-87.74147723471926, 41.95359543105369)"
-									},
-									{
-										"0": "2345371",
-										"1": "MCM PUB & LIQUORS",
-										"2": "MCM PUB & LIQUORS",
-										"3": "1696253",
-										"4": "Restaurant",
-										"5": "Risk 1 (High)",
-										"6": "3906-3910 N CICERO AVE ",
-										"7": "CHICAGO",
-										"8": "IL",
-										"9": "60641",
-										"10": "11/8/2019",
-										"11": "Canvass",
-										"12": "No Entry",
-										"14": "41.95178807",
-										"15": "-87.74741981",
-										"16": "(-87.74741980822624, 41.951788071374104)"
-									},
-									{
-										"0": "2304927",
-										"1": "NOAH'S ARK CHRISTIAN DAYCARE INC",
-										"2": "NOAH'S ARK CHRISTIAN DAYCARE",
-										"3": "2536639",
-										"4": "Daycare Above and Under 2 Years",
-										"5": "Risk 1 (High)",
-										"6": "10951 S MICHIGAN AVE ",
-										"7": "CHICAGO",
-										"8": "IL",
-										"9": "60628",
-										"10": "8/20/2019",
-										"11": "License Re-Inspection",
-										"12": "Pass w/ Conditions",
-										"13": "5. PROCEDURES FOR RESPONDING TO VOMITING AND DIARRHEAL EVENTS - Comments: OBSERVED RESPONDING FOR VOMITING AND DIARRHEAL EVENTS ON SITE. HOWEVER,INSTRUCTED TO IMPLEMENT A PROCEDURE AND PROVIDE ALL NECESSARY SUPPLIES NEEDED TO HANDLE SUCH EVENTS. PRIORITY FOUNDATION VIOLATION.",
-										"14": "41.69474039",
-										"15": "-87.62063554",
-										"16": "(-87.62063554039214, 41.69474039388451)"
-									},
-									{
-										"0": "2345359",
-										"1": "TBD",
-										"2": "CAFE AT THE EXCHANGE",
-										"3": "2584057",
-										"4": "Restaurant",
-										"5": "Risk 1 (High)",
-										"6": "71 S WACKER DR ",
-										"7": "CHICAGO",
-										"8": "IL",
-										"9": "60606",
-										"10": "11/8/2019",
-										"11": "Canvass",
-										"12": "Pass w/ Conditions",
-										"13": "5. PROCEDURES FOR RESPONDING TO VOMITING AND DIARRHEAL EVENTS - Comments: OBSERVED CLEAN-UP OF VOMITING AND DIARRHEA PROCEDURE ON SITE BUT CLEAN-UP KIT ON PREMISES DURING INSPECTION OBSERVED TO BE BLOOD BORNE PATHOGEN CLEAN UP KIT WITH OUT PROPER SANITIZING SOLUTION AND NO MOP FOR VOMIT CLEAN UP . INSTRUCTED TO HAVE SAID PROCEDURE ALONG WITH REQUIRED EQUIPMENT FOR CLEAN-UP. PRIORITY FOUNDATION VIOLATION. NO CITATION ISSUED. 7-38-005 | 22. PROPER COLD HOLDING TEMPERATURES - Comments: OBSERVED IMPROPER TEMPERATURE OF TCS FOODS SUCH AS GRILLED CHICKEN BREAST 47 F, CRISPY CHICKEN SANDWICH 60 F,CHICKEN WRAPS 47 F STORED ON BUFFET TABLE COOLER AND FOOD PREP AREA.MUST HAVE COLD HOLDING FOODS AT 41.0 F OR BELOW.PRIORITY VIOLATION  7-38-005 CITATION ISSUED | 23. PROPER DATE MARKING AND DISPOSITION - Comments: OBSERVED READY TO EAT, TEMPERATURE CONTROL FOR SAFETY FOODS (CHICKEN, SOUPS)NOT PROPERLY DATED , STORED LONGER THAN 24 HOURS IN COOLERS. INSTRUCTED TO PROVIDE PROPER DATE MARKING WITH DISPOSITION DATE FOR RTE FOODS PREPARED ON SITE AND HELD OVER 24 HOURS IN COLD HOLDING UNIT. PRIORITY FOUNDATION VIOLATION. NO CITATION ISSUED. 7-38-005   | 36. THERMOMETERS PROVIDED & ACCURATE - Comments: NOTED NO THERMOMETERS INSIDE HOT HOLDING UNIT CONSPICUOUSLY POSTED TO MONITOR THE AMBIENT TEMPERATURE OF EQUIPMENT. INSTRUCTED TO PROVIDE ACCURATE AMBIEN MEASURING THERMOMETERS IN ALL HOT HOLDING EQUIPMENT AND  ALL REFRIGERATION UNITS | 37. FOOD PROPERLY LABELED; ORIGINAL CONTAINER - Comments: ALL BULK AND WORKING FOOD INGREDIENT CONTAINERS MUST BE LABELED WITH CONTENTS NAME.MUST LABEL FOOD STORAGE CONTAINERS WHEN FOOD IS NOT IN ORIGINAL PACKAGE. | 47. FOOD & NON-FOOD CONTACT SURFACES CLEANABLE, PROPERLY DESIGNED, CONSTRUCTED & USED - Comments: NOTED CARDBOARD BOXES USED TO LINE AND SEPARATE SHELVES IN DRY STORAGE. INSTRUCTED TO CLEAN AND REMOVE ALL CARDBOARD BOXES TO PREVENT HIDING PLACES FOR PEST. | 48. WAREWASHING FACILITIES: INSTALLED, MAINTAINED & USED; TEST STRIPS - Comments: OBSERVED STEAM KETTLES USED FOR SOUP COOKING TO BE BIGGER THAN 3 COMPARTMENT SINK(OR DISH MACHINE) AND CANT BE SUBMERGED IN WASH WATER IN SINK. MUST PROVIDE CLEANING PROCEDURE FOR EACH SEPARATE PIECE OF FOOD-CONTACT EQUIPMENT WITH DESCRIPTION HOW TO BE CLEANED IN PLACE AND/OR MUST SUBMIT THE PROCEDURES TO CDPH AT FOOD@CITYOFCHICAGO.ORG FOR APPROVAL OR PRESENT PROCEDURE TO DEPARTMENT REPRESENTATIVE PRIOR INSPECTION FOR ON SITE REVIEW AND APPROVAL. | 48. WAREWASHING FACILITIES: INSTALLED, MAINTAINED & USED; TEST STRIPS - Comments: FACILITY USES HIGH TEMPERATURE SANITIZING DISH MACHINE AND DOESN'T HAVE PROPER TEMPERATURE MEASURING IRREVERSIBLE REGISTERING TEMPERATURE INDICATOR THAT SHALL BE PROVIDED AND READILY ACCESSIBLE FOR MEASURING THE UTENSIL SURFACE TEMPERATURE.PRIORITY FOUNDATION VIOLATION 7-38-005 NO CITATION ISSUED | 51. PLUMBING INSTALLED; PROPER BACKFLOW DEVICES - Comments: OBSERVED THAT NEW DISH MACHINE DRAIN IS OCCASIONALLY OVERFLOWING RECEPTIVE FLOOR DRAIN UNDER MACHINE AND CAUSING WATER TO SEATTLE UNDER MACHINE. MUST PROVIDE PROPER DRAIN AND PREVENT DRAIN OVERFLOWING.",
-										"14": "41.88071758",
-										"15": "-87.63658911",
-										"16": "(-87.63658910737162, 41.880717575265145)"
-									},
-									{
-										"0": "2345569",
-										"1": "BURGER KING #7623",
-										"2": "BURGER KING #7623",
-										"3": "2368798",
-										"4": "Restaurant",
-										"5": "Risk 2 (Medium)",
-										"6": "1701 W 95TH ST ",
-										"7": "CHICAGO",
-										"8": "IL",
-										"9": "60643",
-										"10": "11/14/2019",
-										"11": "Short Form Complaint",
-										"12": "Pass",
-										"14": "41.72107251",
-										"15": "-87.66493899",
-										"16": "(-87.66493899346078, 41.72107251262758)"
-									},
-									{
-										"0": "2320368",
-										"1": "GADS HILL CHILD CARE CENTER",
-										"2": "GADS HILL CHILD CARE CENTER",
-										"3": "2215799",
-										"4": "Children's Services Facility",
-										"5": "Risk 1 (High)",
-										"6": "2653 W OGDEN AVE ",
-										"7": "CHICAGO",
-										"8": "IL",
-										"9": "60608",
-										"10": "10/24/2019",
-										"11": "License",
-										"12": "Pass",
-										"13": "10. ADEQUATE HANDWASHING SINKS PROPERLY SUPPLIED AND ACCESSIBLE - Comments: ONSERVED THE ADULT WOMENS RESTROOM PUSH FAUCET HANDLES NOT SET AT 15 SECONDS, YOU MUST HOLD THE HANDLE DOWN, AND REACTIVATE FAUCET, INSTRUCTED TO REPAIR, OR REPLACE THE PUSH FACUET. | 55. PHYSICAL FACILITIES INSTALLED, MAINTAINED & CLEAN - Comments: OBSERVED THE WALL AROUND THE UTILITY MOP SINK IN POOR REPAIR, INSTRUCTED TO REPAIR/REPLACE. | 56. ADEQUATE VENTILATION & LIGHTING; DESIGNATED AREAS USED - Comments: OBSERVED THE LIGHT SHIELD OVER THE HANDSINK NOT CLEAN, INSTRUCTED TO CLEAN.",
-										"14": "41.86227323",
-										"15": "-87.69270319",
-										"16": "(-87.69270319111261, 41.86227322567486)"
-									}
-								],
-								"schema": [
-									{
-										"key": "0",
-										"name": "InspectionID",
-										"type": "string"
-									},
-									{
-										"key": "1",
-										"name": "Name",
-										"type": "string"
-									},
-									{
-										"key": "2",
-										"name": "OtherName",
-										"type": "string"
-									},
-									{
-										"key": "3",
-										"name": "LicenseNumber",
-										"type": "string"
-									},
-									{
-										"key": "4",
-										"name": "FacilityType",
-										"type": "string"
-									},
-									{
-										"key": "5",
-										"name": "Risk",
-										"type": "string"
-									},
-									{
-										"key": "6",
-										"name": "Address",
-										"type": "string"
-									},
-									{
-										"key": "7",
-										"name": "City",
-										"type": "string"
-									},
-									{
-										"key": "8",
-										"name": "State",
-										"type": "string"
-									},
-									{
-										"key": "9",
-										"name": "Zip",
-										"type": "string"
-									},
-									{
-										"key": "10",
-										"name": "InspectionDate",
-										"type": "string"
-									},
-									{
-										"key": "11",
-										"name": "InspectionType",
-										"type": "string"
-									},
-									{
-										"key": "12",
-										"name": "Results",
-										"type": "string"
-									},
-									{
-										"key": "13",
-										"name": "Violations",
-										"type": "string"
-									},
-									{
-										"key": "14",
-										"name": "Latitude",
-										"type": "string"
-									},
-									{
-										"key": "15",
-										"name": "Longitude",
-										"type": "string"
-									},
-									{
-										"key": "16",
-										"name": "Location",
-										"type": "string"
-									}
-								]
-							},
-							"isSummary": false,
-							"language": "scala"
-						},
-						"persist_state": {
-							"view": {
-								"type": "details",
-								"chartOptions": {
-									"chartType": "bar",
-									"aggregationType": "count",
-									"categoryFieldKeys": [
-										"0"
-									],
-									"seriesFieldKeys": [
-										"0"
-									],
-									"isStacked": false
-								}
-							}
-						}
-					}
-				}
-			},
 			"enableDebugMode": false,
 			"kernelspec": {
 				"name": "synapse_pyspark",
@@ -349,7 +43,7 @@
 				"nodeCount": 3,
 				"cores": 8,
 				"memory": 56,
-				"extraHeader": null
+				"automaticScaleJobs": false
 			},
 			"sessionKeepAliveTimeout": 30
 		},
@@ -365,9 +59,8 @@
 				"source": [
 					"%%pyspark\r\n",
 					"df = spark.read.load('abfss://powerbi@synapsedlcentralus.dfs.core.windows.net/Bronze/Chicagofoodinspections/2019FoodInspections.csv',header=True,  format='csv')\r\n",
-					"display(df.limit(10))"
+					"display(df.limit(10)) "
 				],
-				"attachments": null,
 				"execution_count": 1
 			},
 			{
@@ -381,8 +74,7 @@
 				},
 				"source": [
 					"Convert csv to parquet"
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -403,7 +95,6 @@
 					"\r\n",
 					"df.write.parquet(\"abfss://powerbi@synapsedlcentralus.dfs.core.windows.net/Bronze/Chicagofoodinspections/2019FoodInspectionsparquet\")"
 				],
-				"attachments": null,
 				"execution_count": 18
 			}
 		]
