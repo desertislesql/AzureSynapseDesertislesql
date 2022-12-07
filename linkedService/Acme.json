@@ -1,0 +1,12 @@
+{
+	"name": "Acme",
+	"properties": {
+		"description": "Acme Workspace",
+		"annotations": [],
+		"type": "PowerBIWorkspace",
+		"typeProperties": {
+			"workspaceID": "967dd847-25d3-44ae-878d-0d37fb15de5b",
+			"tenantID": "d9630500-6b48-4071-9b82-808e42f43ab7"
+		}
+	}
+}
